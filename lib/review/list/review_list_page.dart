@@ -28,13 +28,13 @@ class _ReviewListPageState extends State<ReviewListPage> {
         children: reviewService
             .fetchReviews()
             .map((review) => ReviewListTile(review: review))
-            .toList(),
+            .toList()
+              ..sort(
+                  (a, b) => b.review.timestamp.compareTo(a.review.timestamp)),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => Navigator.push(
-            context,
-            MaterialPageRoute(builder: (_) => ReviewEditPage())
-        ),
+            context, MaterialPageRoute(builder: (_) => ReviewEditPage())),
         tooltip: 'New Review',
         child: Icon(Icons.add),
       ),

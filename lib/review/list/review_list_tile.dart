@@ -16,10 +16,10 @@ class ReviewListTile extends StatelessWidget {
         Icon(
           Icons.stars,
           size: 72.0,
-          color: Color.lerp(Colors.orange, Colors.green, review.stars * .2),
+          color: Color.lerp(Colors.orange, Colors.green, review.rating * .2),
         ),
         Text(
-          review.stars.toString(),
+          review.rating.toString(),
           style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
         )
       ]),

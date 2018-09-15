@@ -1,7 +1,7 @@
 class Review {
-  final int stars;
+  final int rating;
   final String comment;
   final DateTime timestamp;
 
-  Review({this.stars, this.comment, this.timestamp});
+  Review({this.rating, this.comment, this.timestamp});
 }
