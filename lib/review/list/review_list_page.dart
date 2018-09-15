@@ -1,6 +1,6 @@
-import 'package:coffee_app/review/ReviewEditPage.dart';
-import 'package:coffee_app/review/ReviewListTile.dart';
-import 'package:coffee_app/review/ReviewService.dart';
+import 'package:coffee_app/review/edit/review_edit_page.dart';
+import 'package:coffee_app/review/list/review_list_tile.dart';
+import 'package:coffee_app/review/review_service.dart';
 import 'package:flutter/material.dart';
 
 class ReviewListPage extends StatefulWidget {

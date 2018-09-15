@@ -1,5 +1,5 @@
-import 'package:coffee_app/review/Review.dart';
-import 'package:coffee_app/review/ReviewDetailsPage.dart';
+import 'package:coffee_app/review/review.dart';
+import 'package:coffee_app/review/details/review_details_page.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 

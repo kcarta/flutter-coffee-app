@@ -1,4 +1,4 @@
-import 'package:coffee_app/review/Review.dart';
+import 'package:coffee_app/review/review.dart';
 
 class ReviewService {
   List<Review> fetchReviews() {
