@@ -26,7 +26,7 @@ class ReviewEditState extends State<ReviewEditPage> {
       child: Container(
         child: RaisedButton(
           onPressed: _saveReview,
-          child: Text("Save"),
+          child: Text('Save'),
         ),
       ),
     );

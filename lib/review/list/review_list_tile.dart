@@ -23,7 +23,8 @@ class ReviewListTile extends StatelessWidget {
           style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
         )
       ]),
-      title: Text(review.comment,
+      title: Text(
+        review.comment,
         style: TextStyle(fontSize: 18.0),
       ),
       subtitle: Text(DateFormat.yMMMd().format(review.timestamp)),

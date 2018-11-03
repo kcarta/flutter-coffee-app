@@ -10,7 +10,7 @@ class ReviewService {
       var daysInThePast = _random.nextInt(60);
       return Review(
           rating: rating,
-          comment: "Good",
+          comment: 'Good',
           timestamp: DateTime.now().subtract(Duration(days: daysInThePast)));
     });
   }
