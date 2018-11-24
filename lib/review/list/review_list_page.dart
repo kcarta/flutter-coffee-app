@@ -1,3 +1,4 @@
+import 'package:coffee_app/review/details/review_details_page.dart';
 import 'package:coffee_app/review/edit/review_edit_page.dart';
 import 'package:coffee_app/review/list/review_list_tile.dart';
 import 'package:coffee_app/review/review_service.dart';
@@ -26,8 +27,14 @@ class _ReviewListPageState extends State<ReviewListPage> {
       ),
       body: ListView(
         children: reviewService
-            .fetchReviews()
-            .map((review) => ReviewListTile(review: review))
+            .getReviews()
+            .map((review) => ReviewListTile(
+                  review: review,
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (_) => ReviewDetailsPage(review, reviewService))),
+                ))
             .toList()
               ..sort(
                   (a, b) => b.review.timestamp.compareTo(a.review.timestamp)),

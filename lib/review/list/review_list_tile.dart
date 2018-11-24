@@ -1,12 +1,12 @@
 import 'package:coffee_app/review/review.dart';
-import 'package:coffee_app/review/details/review_details_page.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 class ReviewListTile extends StatelessWidget {
   final Review review;
+  final onTap;
 
-  ReviewListTile({this.review});
+  ReviewListTile({this.review, this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -28,8 +28,7 @@ class ReviewListTile extends StatelessWidget {
         style: TextStyle(fontSize: 18.0),
       ),
       subtitle: Text(DateFormat.yMMMd().format(review.timestamp)),
-      onTap: () => Navigator.push(context,
-          MaterialPageRoute(builder: (_) => ReviewDetailsPage(review))),
+      onTap: this.onTap,
     );
   }
 }
